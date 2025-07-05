@@ -20,4 +20,14 @@ public abstract class ExpirableProducts extends Products implements Expriable{
         return expired_date;
     }
 
+    public boolean checkProduct()
+    {
+        if (this.getQuantity() == 0) throw new Error("Out Of Stock");
+        else if (!this.isExpired(LocalDate.now()))
+        {
+            throw new Error("Expired Product");
+        }
+        return true;
+    }
+
 }
