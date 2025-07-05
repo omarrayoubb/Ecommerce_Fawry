@@ -1,3 +1,5 @@
+import java.time.LocalDate;
+
 public abstract class Products {
     private int quantity;
     private String name;
@@ -54,5 +56,9 @@ public abstract class Products {
         }
         setQuantity(this.quantity - Quantity);
     }
-
+    public boolean checkProduct()
+    {
+        if (this.getQuantity() == 0) throw new Error("Out Of Stock");
+        return true;
+    }
 }
