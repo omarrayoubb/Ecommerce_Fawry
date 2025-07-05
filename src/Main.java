@@ -8,6 +8,10 @@ public class Main {
         ShipmentExpirableProducts cheese = new ShipmentExpirableProducts(10, "Cheese", -15.0, LocalDate.now(), 30);
         Cart c = new Cart();
         c.AddToCart(cheese, 2);
+        ShipmentProducts shendy = new ShipmentProducts(200, "shendy", 30.0, 120);
+        Customer Saber = new Customer("saber", 200, new Cart());
+        Saber.AddToUserCart(shendy, 2);
+        Saber.CheckOut();
 
     }
 }

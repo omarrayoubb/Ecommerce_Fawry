@@ -30,6 +30,26 @@ public class Cart {
             }
         }
     }
+    public double getCartPrice()
+    {
+        double CartPrice = 0.0;
+        for (CartProducts c: Products)
+        {
+            CartPrice += c.getPrice();
+        }
+        return CartPrice;
+    }
+    public boolean isEmpty()
+    {
+        return Products.isEmpty();
+    }
+    public void PrintAllCart()
+    {
+        for (CartProducts p: Products)
+        {
+            p.PrintCartItems();
+        }
+    }
 
 }
 

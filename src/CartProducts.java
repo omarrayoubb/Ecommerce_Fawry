@@ -19,10 +19,13 @@ public class CartProducts {
     {
         return Product.getName();
     }
-    public double subTotal()
-    {
+    public double subTotal() {
         return this.Quantity * getPrice();
     }
 
+    public void PrintCartItems()
+    {
+        System.out.println(Product.getQuantity() + "X "  + Product.getName() + "    " + subTotal());
+    }
 
 }
